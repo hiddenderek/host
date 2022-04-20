@@ -1,11 +1,14 @@
+
 body {
-  overflow: hidden;
-  /* Hide scrollbars */
-  background: rgb(10, 13, 41);
-  background-image: url("pageData/pageInfo/images/backgroundImage.png");
-  background-size: auto 100vh;
-  width: 100%;
-  height: 100%;
+  overflow: hidden; /* Hide scrollbars */
+  background-color: rgb(61, 61, 61);
+  background-size: 200rem;
+  background-image: url('/images/background.jpg');
+  background-blend-mode: multiply;
+  padding: none;
+  margin: 0;
+  z-index: 100;
+  scrollbar-gutter: stable;
 }
 
 .pageRoot {
@@ -23,11 +26,12 @@ body {
   --connectorSize: 1rem;
   --extraSmallLineHeight: 2rem;
   --smallLineHeight: 2.7rem;
-  --bannerButtonContainer: 3.1rem;
+  --bannerButtonContainer: 5rem;
   --bottomBarHeight: 5rem;
   --equipManagerAddMenuHeight: auto;
   --extendedSideBar: 35rem;
   --padding: .5rem;
+  --appWidth: 80vw;
   font-size: 62.5% !important;
 }
 
@@ -58,10 +62,6 @@ body {
   /* color of the scroll thumb */
   border-radius: 20px;
   /* roundness of the scroll thumb */
-}
-
-h3 {
-  font-size: 14px;
 }
 
 ul {
@@ -157,13 +157,42 @@ h2 {
   margin: 0;
   box-sizing: border-box;
   align-self: center
+  }
+  
+  h3 {
+    font-size: 3.5rem;
+    font-family: "minimal";
+    color: rgb(29, 148, 196);
+    align-self: center;
+    text-align: center;
+
+  }
+  
+  h4 {
+    font-size: 4rem;
+  }
+
+h5 {
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 10rem;
+  color: white;
+  font-family: "minimal";
+  box-sizing: border-box;
 }
+
 
 p {
   padding: none;
   margin: 0;
+  font-size: 3.2rem;
+  font-family: "minimal";
+  color: white;
 }
-
+.paragraph {
+  text-indent: 3rem;
+}
 button {
   display: block;
   background-color: rgb(255, 255, 255);
@@ -195,11 +224,14 @@ button:active {
   width: 100%;
   height: 100%;
   max-height: calc(100vh - var(--bannerButtonContainer));
-  display: grid;
+  display: flex;
+  flex-flow: column;
   align-content: center;
-  justify-content: center;
+  justify-content: start;
   overflow-x: hidden;
-  overflow-y: scroll
+  overflow-y: scroll;
+  align-self: start;
+  position:relative
 }
 
 .banner {
@@ -211,21 +243,25 @@ button:active {
 
 .bannerButton {
   height: 100%;
-  width: 70px;
+  width: 10rem;
   display: inline-flex;
   align-items: center;
   justify-items: center;
   align-content: center;
   justify-content: center;
   background-color: transparent;
-  color: #daf8f8e1;
+  color: #ffffffe1;
   user-select: none;
-  font: 14px minimal, sans-serif;
+  font: 2.3rem minimal, sans-serif;
   transition: background-color 300ms ease-out;
   pointer-events: all;
   float: right;
 }
-
+.bannerIcon {
+  padding: .7rem;
+  box-sizing: border-box;
+  max-height: var(--bannerButtonContainer);
+}
 .profileContainer {
   width: fit-content;
   max-height: 100%;
@@ -237,12 +273,94 @@ button:active {
 }
 .section {
   width: 100%;
-  padding: 2rem;
+  max-width: var(--appWidth);
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  min-height: calc(100vh - var(--bannerButtonContainer));
+  height: fit-content;
+  
 }
-.highlightItem {
-  background-color: rgba(255, 255, 255, 0.093);
+.card {
+  width: 80rem;
+  max-width: calc( var(--appWidth) * .9);
+  height: 40rem;
+  background-color: grey;
+  border-radius: 1rem;
+  position: relative;
+}
+.cardHeader {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
+.expandedCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-height: 60rem;
+  background-color: grey;
+  border-radius: 1rem;
+}
+
+.xIcon {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 50%;
+  margin-right: .8rem;
+  transform: translateY(-50%);
+  width: 3rem;
+}
+
+.highlightItem {
+  background-color: rgb(29, 148, 196);
+}
+.homeLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  word-wrap: break-word;
+  max-width: 60%;
+}
+.profile {
+  width: 35rem;
+}
+.profileInfo {
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+}
+.profileInfo p {
+  color: rgb(29, 148, 196);
+}
+.workButton {
+  border: solid .3rem rgb(29, 148, 196);
+  border-radius: 1rem;
+  padding: .4rem;
+  color: rgb(29, 148, 196);
+  transition: background-color 200ms;
+}
+.workButton:hover{ 
+  background-color: rgba(255, 255, 255, 0.185);
+}
+.aboutContainer {
+  width: 80%;
+}
+.aboutContainer p {
+  font-size: 2.5rem;
+}
 .noWrap {
   white-space: nowrap;
 }
@@ -319,12 +437,12 @@ button:active {
 }
 
 .mediumLineHeight {
-  height: 40px;
+  height: 4rem;
   font-size: 1.4rem;
 }
 
 .largeLineHeight {
-  height: 90px;
+  height: 9rem;
 }
 
 .extraLargeLineHeight {
@@ -371,7 +489,8 @@ button:active {
 
 .center {
   margin-left: 50%;
-  transform: translateX(-50%);
+  margin-top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   transform-origin: center center;
 }
@@ -446,13 +565,14 @@ button:active {
 .appContainer {
   margin-left: 50%;
   transform: translateX(-50%);
-  width: 80vw;
+  width:  var(--appWidth);
   height: 100vh;
   display: grid;
-  grid-template-columns: 80vw;
+  grid-template-columns: var(--appWidth);
   grid-template-rows: var(--bannerButtonContainer) calc(100vh - var(--bannerButtonContainer));
   grid-template-areas:
     "banner"
     "content";
   transition: grid-template-rows 200ms;
+  position: relative;
 }
