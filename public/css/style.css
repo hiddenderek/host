@@ -288,7 +288,7 @@ button:active {
 .card {
   width: 80rem;
   max-width: calc( var(--appWidth) * .9);
-  height: 40rem;
+  min-height: 40rem !important;
   background-color: grey;
   border-radius: 1rem;
   position: relative;
@@ -350,10 +350,11 @@ button:active {
   border-radius: 1rem;
   padding: .4rem;
   color: rgb(29, 148, 196);
-  transition: background-color 200ms;
+  transition:  border 400ms, color 400ms;
 }
 .workButton:hover{ 
-  background-color: rgba(255, 255, 255, 0.185);
+  border: solid .3rem rgb(98, 209, 253);
+  color: rgb(98, 209, 253);
 }
 .aboutContainer {
   width: 80%;
