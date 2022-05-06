@@ -28,7 +28,7 @@ const initialState: pageScrollState = {
     currentPosition: 0,
     buttonPress: false,
     currentSection: '',
-    cardInfo: {name: '', image: '', text: ''},
+    cardInfo: {name: '', image: '', expandedImage: '', text: '', tags: []},
     cardStatus: false
 }
 
