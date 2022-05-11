@@ -14,7 +14,7 @@ function Card({ data }: { data: card }) {
             <div className='card' >
                 <img className="absolute fullWidth fullHeight" src={data.image} />
                 <div className="cardHeader">
-                    <img className="xIcon" src="images/zoom.png" onClick={setCard} />
+                    <img className="rightIcon" src="images/zoom.png" onClick={setCard} />
                 </div>
             </div>
             <div className="tagContainer">

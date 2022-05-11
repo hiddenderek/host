@@ -12,8 +12,9 @@ function ExpandedCard () {
     return(
     <div className={`expandedCard ${cardStatus ? "" : "expandedCardHidden"}`} >
         <div className = "cardHeader">
+            <img className = "leftIcon" src = "images/github_logo.png" onClick = {setCard}  />   
             <h2>{name}</h2>
-            <img className = "xIcon" src = "images/xIcon.png" onClick = {setCard}  />
+            <img className = "rightIcon" src = "images/xIcon.png" onClick = {setCard}  />
         </div>
         <div className = "navContainer">
             <img className = "expandedCardImage" src = {expandedImage}/>
