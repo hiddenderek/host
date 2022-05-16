@@ -427,9 +427,29 @@ pointer-events: none;
   width: 3.5rem;
   transition: transform 200ms;
   image-rendering: high-quality;
+  background-color: transparent;
 }
+
 .rightIcon:hover {
   transform: translateY(-50%) scale(1.2);
+}
+
+.card .rightIcon:hover {
+  animation: none;
+  -webkit-animation-name: none;
+}
+
+.card .rightIcon {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  2% {
+    transform: translateY(-50%) scale(1);
+  }
+  15% {
+    transform: translateY(-50%) scale(1.15);
+  }
 }
 
 .homeLayout {

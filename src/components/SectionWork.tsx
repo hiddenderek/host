@@ -13,8 +13,8 @@ const cardData = [
     }, 
     {
         name: 'Wiki Builder', 
-        image: 'images/gameCreator.png', 
-        expandedImage: '',
+        image: 'images/wikiBuilderCard.png', 
+        expandedImage: 'images/wikiBuilderExpandedCard.png', 
         text: 'A fully functional full stack wiki builder. Contribute with you own wikis, and browse others. Built with TypeScript, deployed with AWS and Docker containers. Includes JWT based user session authentication and a wiki editing system', 
         tags: ['Node.js', 'Docker', 'Express', 'Postgres', 'React', 'Redux-Toolkit']
     }, 
@@ -23,7 +23,8 @@ const cardData = [
         image: 'images/oasisLogoEco.png', 
         expandedImage: 'images/oasisEcoExpandedCard.png',
         text: `A software ecosystem across multiple full stack programs that communicate with each other. These programs are designed to automate the generation of user interfaces used to control air and water systems of enterprise buildings. Complex redux state management is used to accomplish this. Due to confidentiality concerns, I cannot share my code but I can share a video that goes over the basics of what this program can do.`, 
-        tags: ['Node.js', 'Docker', 'Express', 'Postgres', 'Vanilla Js', 'React', 'Redux-Toolkit']}
+        tags: ['Node.js', 'Docker', 'Express', 'Postgres', 'Vanilla Js', 'React', 'Redux-Toolkit']
+    }
 ]
 
 function SectionWork () {
