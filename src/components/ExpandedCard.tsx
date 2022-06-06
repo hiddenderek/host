@@ -13,14 +13,14 @@ function ExpandedCard () {
     <div className={`expandedCard ${cardStatus ? "" : "expandedCardHidden"}`} >
         <div className = "cardHeader">
             <img className = "leftIcon" src = "images/github_logo.png" onClick = {setCard}  />   
-            <h2>{name}</h2>
-            <img className = "rightIcon" src = "images/xIcon.png" onClick = {setCard}  />
+            <h2 data-testid = "expanded_card_name">{name}</h2>
+            <img data-testid = "expanded_card_close" className = "rightIcon" src = "images/xIcon.png" onClick = {setCard}  />
         </div>
         <div className = "navContainer">
-            <img className = "expandedCardImage" src = {expandedImage}/>
+            <img data-testid = "expanded_card_image" className = "expandedCardImage" src = {expandedImage}/>
             <a className = "navText">Click here to visit</a>
         </div>
-        <p className = "expandedCardText">{text}</p>
+        <p data-testid = "expanded_card_text" className = "expandedCardText">{text}</p>
     </div>
     )
 }

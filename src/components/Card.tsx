@@ -12,13 +12,13 @@ function Card({ data }: { data: card }) {
     return (
         <div className = "cardContainer">
             <div className='card' >
-                <img className="absolute fullWidth fullHeight" src={data.image} />
+                <img data-testid = "card_image" className="absolute fullWidth fullHeight" src={data.image} />
                 <div className="cardHeader">
-                    <img className="rightIcon" src="images/zoom.png" onClick={setCard} />
+                    <img data-testid = "card_zoom_button" className="rightIcon" src="images/zoom.png" onClick={setCard} />
                 </div>
             </div>
-            <div className="tagContainer">
-                {data.tags.map((item: string) => <div className = "tag">{item}</div>)}
+            <div data-testid = "card_tags" className="tagContainer">
+                {data.tags.map((item: string, index) => <div key = {index} className = "tag">{item}</div>)}
             </div>
         </div>
     )
