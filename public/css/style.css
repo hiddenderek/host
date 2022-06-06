@@ -436,6 +436,7 @@ pointer-events: none;
 
 .card .rightIcon:hover {
   animation: none;
+  animation-name: none;
   -webkit-animation-name: none;
 }
 

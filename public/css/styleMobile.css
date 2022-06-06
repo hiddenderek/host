@@ -1,0 +1,29 @@
+@media (max-device-aspect-ratio: 1/1) {
+    :root {
+        --transformCircleSize: 1rem;
+        --connectorSize: 1rem;
+        --extraSmallLineHeight: 2rem;
+        --smallLineHeight: 2.7rem;
+        --bannerButtonContainer: 10rem;
+        --bottomBarHeight: 5rem;
+        --equipManagerAddMenuHeight: auto;
+        --extendedSideBar: 35rem;
+        --padding: .5rem;
+        --appWidth: 100vw;
+        font-size: calc( (25 * (100vw / 1440)));
+    }
+    .bannerButton {
+        width: 16rem;
+        font: 3.5rem minimal, sans-serif;
+    }  
+    .profileContainer {
+        gap: 2rem;
+    }
+    h4 {
+        display: none;
+    }
+}
+        
+@media (min-device-aspect-ratio: 1/1) {
+    
+}
