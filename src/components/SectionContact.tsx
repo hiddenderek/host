@@ -12,7 +12,8 @@ function SectionContact () {
     return(
     <div className='section' ref = {sectionRef}>
         <h3>Contact</h3>
-        <p>Info coming soon</p>
+        <p>Email: derekjchapman94@gmail.com</p>
+        <p>Phone: 345-409-5474</p>
     </div>
     )
 }
