@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useAppDispatch } from "../app/hooks"
-import { Route, Switch, useLocation } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import MainArea from './MainArea'
 import Banner from './Banner'
 import ExpandedCard from './ExpandedCard'

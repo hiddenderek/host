@@ -1,5 +1,5 @@
-import React, {useCallback, useEffect, useRef} from 'react'
-import { useAppDispatch, useAppSelector } from '../app/hooks'
+import React, {useEffect, useRef} from 'react'
+import { useAppSelector } from '../app/hooks'
 import SectionHome from './SectionHome'
 import SectionAbout from './SectionAbout'
 import SectionWork from './SectionWork'
@@ -12,6 +12,8 @@ export const cardData : card[] = [
         name: 'Game Creator',
         image: 'images/gameCreatorCard.png', 
         expandedImage: 'images/gameCreatorExpandedCard.png',
+        siteLink: 'https://dchapman-portfolio.site:8100/home',
+        githubLink: 'https://github.com/hiddenderek/gameCreator',
         text: 'A fully functional full stack game editor that allows you to log in, share your games, and play others. Built with TypeScript, deployed with AWS and Docker containers. Includes JWT based user session authentication and a hand made game physics engine.', 
         tags: ['Node.js', 'Docker', 'Express', 'Postgres', 'React', 'Redux-Toolkit']
     }, 
@@ -19,6 +21,8 @@ export const cardData : card[] = [
         name: 'Wiki Builder', 
         image: 'images/wikiBuilderCard.png', 
         expandedImage: 'images/wikiBuilderExpandedCard.png', 
+        siteLink: 'https://dchapman-portfolio.site:8030/home',
+        githubLink: 'https://github.com/hiddenderek/wikiBuilder',
         text: 'A fully functional full stack wiki builder. Contribute with you own wikis, and browse others. Built with TypeScript, deployed with AWS and Docker containers. Includes JWT based user session authentication and a wiki editing system', 
         tags: ['Node.js', 'Docker', 'Express', 'Postgres', 'React', 'Redux-Toolkit']
     }, 
@@ -26,6 +30,8 @@ export const cardData : card[] = [
         name: 'Oasis Software Ecosystem', 
         image: 'images/oasisLogoEco.png', 
         expandedImage: 'images/oasisEcoExpandedCard.png',
+        siteLink: '',
+        githubLink: '',
         text: `A software ecosystem across multiple full stack programs that communicate with each other. These programs are designed to automate the generation of user interfaces used to control air and water systems of enterprise buildings. Complex redux state management is used to accomplish this. Due to confidentiality concerns, I cannot share my code but I can share a video that goes over the basics of what this program can do.`, 
         tags: ['Node.js', 'Docker', 'Express', 'Postgres', 'Vanilla Js', 'React', 'Redux-Toolkit']
     }

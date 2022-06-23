@@ -4,7 +4,7 @@ import { setCardStatus } from '../features/pageScroll/pageScroll-slice'
 
 function ExpandedCard () {
     const dispatch = useAppDispatch()
-    const {name, expandedImage, text} = useAppSelector((state: any) =>  state.pageScroll.cardInfo)
+    const {name, expandedImage, siteLink, githubLink, text} = useAppSelector((state: any) =>  state.pageScroll.cardInfo)
     const cardStatus = useAppSelector((state: any) => state.pageScroll.cardStatus)
     const [videoStatus, setVideoStatus] = useState(false)
     useEffect(()=>{
@@ -17,7 +17,9 @@ function ExpandedCard () {
     return (
         <div className={`expandedCard ${cardStatus ? "" : "expandedCardHidden"}`} >
             <div className="cardHeader">
-                <img className="leftIcon" src="images/github_logo.png" onClick={setCard} />
+                {!name.includes("Oasis") ? 
+                  <a href = {githubLink}><img className="leftIcon" src="images/github_logo.png" /></a>              
+                : ""}
                 <h2 data-testid="expanded_card_name">{name}</h2>
                 <img data-testid="expanded_card_close" className="rightIcon" src="images/xIcon.png" onClick={setCard} />
             </div>
@@ -31,7 +33,7 @@ function ExpandedCard () {
                     </>
                     : ""}
                 <img data-testid="expanded_card_image" className="expandedCardImage" src={expandedImage} />
-                {!name.includes("Oasis") ? <a className="navText">Click here to visit</a> : <p className="navText" onClick={() => { setVideoStatus(true) }}>Click here to watch video</p>}
+                {!name.includes("Oasis") ? <a className="navText" href = {siteLink}>Click here to visit</a> : <p className="navText" onClick={() => { setVideoStatus(true) }}>Click here to watch video</p>}
             </div>
             <p data-testid="expanded_card_text" className="expandedCardText">{text}</p>
         </div>

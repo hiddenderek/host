@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react'
-import { useHistory } from 'react-router'
+import React from 'react'
 import { card } from '../features/pageScroll/page_types'
 import { useAppDispatch } from '../app/hooks'
 import { setCardInfo, setCardStatus } from '../features/pageScroll/pageScroll-slice'

@@ -7,8 +7,6 @@ import { Provider } from 'react-redux'
 import {store} from '../app/store'
 import { setSectionPosition } from '../features/pageScroll/pageScroll-slice'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { renderWithRouter } from '../utils/testHelperFunctions'
-import userEvent from '@testing-library/user-event'
 import MainArea from '../components/MainArea'
 
 const dispatch = store.dispatch
