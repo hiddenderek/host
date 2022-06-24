@@ -18,6 +18,10 @@ app.get('/*', async (req: any, res: any) => {
     res.render('index', { data: contentGet.initialContent, isMobile: req.useragent.isMobile, isDesktop: req.useragent.isDesktop });
 })
 
+app.listen(8080, function listenHandler() {
+    console.info(`Running on 8080`)
+})
+
 https.createServer({
     key: fs.readFileSync("./src/key.pem"),
     cert: fs.readFileSync("./src/cert.pem"),
