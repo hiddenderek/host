@@ -23,8 +23,9 @@ app.listen(8080, function listenHandler() {
 })
 
 https.createServer({
-    key: fs.readFileSync("./src/key.pem"),
-    cert: fs.readFileSync("./src/cert.pem"),
+    key: fs.readFileSync("./src/ssl/dchapman-portfolio_site.key"),
+    cert: fs.readFileSync("./src/ssl/dchapman-portfolio_site.crt"),
+    ca: fs.readFileSync("./src/ssl/dchapman-portfolio_site.ca-bundle")
   },app).listen(config.port, function listenHandler() {
       console.info(`Running on ${config.port}`)
   })
