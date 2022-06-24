@@ -17,7 +17,7 @@ function App() {
     return (
         <div className="appContainer">
             <Switch>
-                <Route path="/home">
+                <Route path="/">
                     <Banner />
                     <MainArea />
                     <ExpandedCard/>
