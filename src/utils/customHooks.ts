@@ -14,9 +14,7 @@ export function useScrollMove(target : React.RefObject<HTMLElement>) {
     }, [currentPosition, buttonPress])
     
     function scrollMove (){
-        console.log(location.search)
         const targetElm = target.current
-        console.log(currentPosition)
         if (targetElm && currentPosition >= 0 && buttonPress) {
             targetElm.scrollTo(
                 {
@@ -42,7 +40,6 @@ export function useTrackScroll(target : React.RefObject<HTMLElement>) {
     if (targetElm) {
         const { height } = targetElm.getBoundingClientRect()
         const scrollPosition = targetElm.scrollTop + (height / 2)
-        console.log(targetElm.scrollTop)
         if (scrollPosition <= aboutPosition) {
             dispatch(setCurrentSection('home'))
         } else if (scrollPosition > aboutPosition && scrollPosition <= workPosition && aboutPosition >= 0) {
@@ -77,7 +74,6 @@ export function useSendToSection(name: string) {
                 case ("contact"): topAmount = contactPosition
                     break
             }
-            console.log(topAmount)
             dispatch(setCurrentPosition(topAmount))
             dispatch(setButtonPress(true))
         }

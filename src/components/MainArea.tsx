@@ -45,7 +45,6 @@ function MainArea () {
     const aboutPosition = useAppSelector((state: any) => state.pageScroll.aboutPosition)
     const contactPosition = useAppSelector((state: any) => state.pageScroll.contactPosition)
     const workPosition = useAppSelector((state: any) => state.pageScroll.workPosition)
-    console.log('main area')
     useEffect(()=>{
         scrollMove()
     },[])
