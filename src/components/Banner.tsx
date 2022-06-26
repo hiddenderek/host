@@ -6,7 +6,7 @@ function Banner () {
     return(
     <div className='banner'>
         <ProfileContainer/>
-        {buttons.map(item => <BannerButton name = {item} />)}
+        {buttons.map((item, index) => <BannerButton key = {index} name = {item} />)}
     </div>
     )
 }

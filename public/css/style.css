@@ -303,6 +303,11 @@ button:active {
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  transition: outline 200ms;
+}
+.card:hover {
+  outline: 2px solid rgb(29, 148, 196);
 }
 .tagContainer {
   position: absolute;

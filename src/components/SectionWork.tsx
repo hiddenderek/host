@@ -9,7 +9,6 @@ function SectionWork ({work} : {work: card[]}) {
     const pageHeight = useAppSelector((state: any)=> state.pageScroll.pageHeight)
     const dispatch = useAppDispatch()
     const sectionRef = useRef<HTMLDivElement>(null)
-    console.log('abouttttt')
     useEffect(()=>{
         dispatch(setSectionPosition({type: "work", position: sectionRef.current!.offsetTop}))
     },[pageWidth, pageHeight])

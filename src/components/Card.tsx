@@ -10,7 +10,7 @@ function Card({ data }: { data: card }) {
     }
     return (
         <div className = "cardContainer">
-            <div className='card' >
+            <div className='card' onClick={setCard}>
                 <img data-testid = "card_image" className="absolute fullWidth fullHeight" src={data.image} />
                 <div className="cardHeader">
                     <img data-testid = "card_zoom_button" className="rightIcon" src="images/zoom.png" onClick={setCard} />

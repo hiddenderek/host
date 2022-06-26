@@ -7,7 +7,6 @@ function SectionAbout () {
     const dispatch = useAppDispatch()
     const sectionRef = useRef<HTMLDivElement>(null)
     useEffect(() => {
-        console.log('redo')
         dispatch(setSectionPosition({ type: "about", position: sectionRef.current!.offsetTop }))
     }, [pageWidth, pageHeight])
     return (
